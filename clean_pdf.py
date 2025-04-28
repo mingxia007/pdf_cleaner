@@ -4,7 +4,7 @@ from pypdf import PdfReader as pr, PdfWriter as pw
 that is irrelevant to the content. The filenames are also always mixed up. 
 I wrote this script to solve the problem."""
 
-def remove_first_page(source_dir):
+def clean_pdf(source_dir):
     """
     Removes the first page of all PDF files in the directory, renames the 
     edited files to a numbered series, and stores them in a new directory.
@@ -47,3 +47,7 @@ def remove_first_page(source_dir):
         print(f"Could not remove{source_dir}. It may not be empty.")
         
     print("Done! All Pdfs are converted successfully!")
+
+
+SOURCE_DIR = ""
+clean_pdf(SOURCE_DIR)
